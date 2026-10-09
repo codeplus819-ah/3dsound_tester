@@ -40,13 +40,13 @@ add_custom_command(TARGET 3dsound_test POST_BUILD
         $<TARGET_FILE:OpenAL>
         $<TARGET_FILE_DIR:3dsound_test>
     COMMAND ${CMAKE_COMMAND} -E copy_if_different
-        "${SFML_DIR}/bin/sfml-graphics-2.dll"
+        "${SFML_DIR}/bin/sfml-graphics-3.dll"
         $<TARGET_FILE_DIR:3dsound_test>
     COMMAND ${CMAKE_COMMAND} -E copy_if_different
-        "${SFML_DIR}/bin/sfml-window-2.dll"
+        "${SFML_DIR}/bin/sfml-window-3.dll"
         $<TARGET_FILE_DIR:3dsound_test>
     COMMAND ${CMAKE_COMMAND} -E copy_if_different
-        "${SFML_DIR}/bin/sfml-system-2.dll"
+        "${SFML_DIR}/bin/sfml-system-3.dll"
         $<TARGET_FILE_DIR:3dsound_test>
 )
 
@@ -54,10 +54,4 @@ add_custom_command(TARGET 3dsound_test POST_BUILD
     COMMAND ${CMAKE_COMMAND} -E copy_directory
         "${CMAKE_SOURCE_DIR}/src/assets"
         $<TARGET_FILE_DIR:3dsound_test>/assets
-)
-
-add_custom_command(TARGET 3dsound_test POST_BUILD
-    COMMAND ${CMAKE_COMMAND} -E copy_directory
-        "${CMAKE_BINARY_DIR}/hrtf"
-        $<TARGET_FILE_DIR:3dsound_test>/hrtf
 )
