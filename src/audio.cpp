@@ -1,3 +1,8 @@
+#ifndef ALC_SOFT_HRTF
+#define ALC_SOFT_HRTF 1
+#define ALC_HRTF_SOFT 0x1992
+#endif
+
 #include "audio.h"
 #include <iostream>
 #include <vector>
