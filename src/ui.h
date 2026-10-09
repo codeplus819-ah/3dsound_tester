@@ -30,6 +30,7 @@ struct Button {
     void handleEvent(const sf::Event& event, sf::Vector2f mousePos);
     void draw(sf::RenderWindow& window);
     bool contains(sf::Vector2f point) const;
+    void updateHover(sf::Vector2f mousePos) { hovered = contains(mousePos); }
 };
 
 }

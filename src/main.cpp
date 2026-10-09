@@ -164,7 +164,7 @@ int main() {
         };
 
         handleEvents(window, mousePos);
-        playAllBtn.handleEvent({}, mousePos);
+        playAllBtn.updateHover(mousePos);
 
         bool mouseDown = sf::Mouse::isButtonPressed(sf::Mouse::Button::Left);
         bool hoveringPlayAll = playAllBtn.contains(mousePos);
