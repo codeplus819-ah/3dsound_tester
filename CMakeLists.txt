@@ -21,6 +21,8 @@ add_executable(3dsound_test
     src/main.cpp
     src/scanner.cpp
     src/wav_loader.cpp
+    src/audio.cpp
+    src/ui.cpp
 )
 
 target_include_directories(3dsound_test PRIVATE
