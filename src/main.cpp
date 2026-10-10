@@ -127,7 +127,7 @@ void handleEvents(sf::RenderWindow& window, sf::Vector2f mousePos) {
 }
 
 int main() {
-    sf::RenderWindow window(sf::VideoMode({1000, 700}), "3D Sound Test");
+    sf::RenderWindow window(sf::VideoMode({1000, 700}), "3D Sound Tester");
     window.setFramerateLimit(60);
 
     if (!g_font.openFromFile("assets/alibaba.ttf")) {
