@@ -6,7 +6,7 @@ Add WAV audio files, assign 3D coordinates to each sound, and hear how their pos
 
 ## Preview
 
-![3D Sound Tester Preview](preview.png)
+![3D Sound Tester Preview](preview.PNG)
 
 ## Prebuilt Release
 
