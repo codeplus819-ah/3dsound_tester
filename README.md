@@ -4,30 +4,34 @@ A simple C++ application for testing 3D positional audio using **OpenAL Soft** a
 
 Add WAV audio files, assign 3D coordinates to each sound, and hear how their positions affect the perceived direction and distance of the audio.
 
+## Preview
+
+![3D Sound Tester Preview](preview.png)
+
 ## Prebuilt Release
 
 If you downloaded a prebuilt release and don't want to compile the project manually, you can skip the installation and build instructions and go directly to the [Usage](#usage) section.
 
-The release package also includes several **preloaded sample sounds**, allowing you to start testing 3D positional audio immediately without adding your own WAV files.
+The release package includes several **preloaded sample sounds**, allowing you to start testing 3D positional audio immediately without adding your own WAV files.
 
 ## Features
 
-* **3D Positional Audio:** Position sounds in 3D space using X, Y, and Z coordinates.
-* **Individual Playback:** Play each sound separately to test its position.
-* **Play All:** Play all loaded sounds with configurable delays.
-* **WAV Support:** Load WAV files from the sounds directory.
-* **HRTF:** Enable Head-Related Transfer Function for a more realistic spatial audio experience.
-* **Simple GUI:** A straightforward graphical interface built with SFML.
+- **3D Positional Audio:** Position sounds in 3D space using X, Y, and Z coordinates.
+- **Individual Playback:** Play each sound separately to test its position.
+- **Play All:** Play all loaded sounds with configurable delays.
+- **WAV Support:** Load WAV files from the sounds directory.
+- **HRTF:** Enable Head-Related Transfer Function for a more realistic spatial audio experience.
+- **Simple GUI:** A straightforward graphical interface built with SFML.
 
 ## Requirements
 
 To build the project from source, you need:
 
-* A C++20-compatible compiler
-* CMake 3.15 or newer
-* SFML 3
-* OpenAL Soft
-* Git
+- A C++20-compatible compiler
+- CMake 3.15 or newer
+- SFML 3
+- OpenAL Soft
+- Git
 
 These requirements are for compiling the project. If you downloaded a prebuilt release, you can skip this section.
 
@@ -35,6 +39,8 @@ These requirements are for compiling the project. If you downloaded a prebuilt r
 
 ```text
 3dsound_tester/
+├── preview.png
+├── LICENSE
 ├── assets/
 │   ├── alibaba.ttf
 │   └── sounds/
@@ -152,9 +158,9 @@ After building, run the generated executable from the appropriate output directo
 
 Each sound has three coordinates:
 
-* **X:** Horizontal position.
-* **Y:** Vertical position.
-* **Z:** Depth position.
+- **X:** Horizontal position.
+- **Y:** Vertical position.
+- **Z:** Depth position.
 
 The listener starts at the origin `(0, 0, 0)`. Changing a sound's coordinates changes its spatial position relative to the listener.
 
@@ -164,11 +170,11 @@ The delay is measured in seconds.
 
 For example:
 
-| Sound   | Delay |
-| ------- | ----: |
-| Sound 1 |     0 |
-| Sound 2 |     1 |
-| Sound 3 |   2.5 |
+| Sound | Delay |
+|---|---:|
+| Sound 1 | 0 |
+| Sound 2 | 1 |
+| Sound 3 | 2.5 |
 
 When you press **Play All**, each sound's delay is measured from the same playback trigger. Sounds can overlap if their playback durations overlap.
 
@@ -190,29 +196,29 @@ The application opens in a window with a resolution of **1000 × 700 pixels**. I
 
 ### No sounds are detected
 
-* Check that your WAV files are inside `assets/sounds/` in the runtime directory.
-* On Windows, verify that the assets were copied to the build output directory.
-* Ensure that the file extension is `.wav`.
+- Check that your WAV files are inside `assets/sounds/` in the runtime directory.
+- On Windows, verify that the assets were copied to the build output directory.
+- Ensure that the file extension is `.wav`.
 
 ### The application fails to start
 
-* Verify that the required SFML DLLs are available on Windows.
-* Check that your SFML version is compatible with the project. The code targets SFML 3.
-* Make sure the required OpenAL Soft dependencies are installed or built correctly.
-* Check the paths in `CMakeLists.txt`.
+- Verify that the required SFML DLLs are available on Windows.
+- Check that your SFML version is compatible with the project. The code targets SFML 3.
+- Make sure the required OpenAL Soft dependencies are installed or built correctly.
+- Check the paths in `CMakeLists.txt`.
 
 ### A WAV file cannot be loaded
 
-* Verify that the file is a valid WAV file.
-* Try converting it to a supported PCM or floating-point WAV format.
-* Make sure the audio file is mono or stereo.
+- Verify that the file is a valid WAV file.
+- Try converting it to a supported PCM or floating-point WAV format.
+- Make sure the audio file is mono or stereo.
 
 ## Technologies
 
-* **C++20**
-* **SFML 3** — Window management and graphical user interface
-* **OpenAL Soft** — 3D positional audio
-* **CMake** — Build configuration
+- **C++20**
+- **SFML 3** — Window management and graphical user interface
+- **OpenAL Soft** — 3D positional audio
+- **CMake** — Build configuration
 
 ## License
 
@@ -223,4 +229,3 @@ Copyright (c) 2026 AHM.
 You are free to use, copy, modify, distribute, sublicense, and sell copies of this software, provided that the copyright notice and permission notice are included in all copies or substantial portions of the Software.
 
 See the [LICENSE](LICENSE) file for the full license text.
-
